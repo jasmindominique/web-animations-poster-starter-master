@@ -85,16 +85,79 @@ body {
 	overflow: hidden;
 	background-color: #454454;
 	box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
-	background-image: url("../img/total.jpg");
+	background-image: url("../img/space.jpg");
 	background-size: contain;
 	background-repeat: round;
 }
 
-.poster .mountain {
-	width: 8%;
+.poster .border .page-border {
 	position: absolute;
-	top: 4%;
-	left: 15%;
+	width: 241%;
+	top: -.92%;
+	left: -22%;
+}
+
+.poster .background .bg-fullPoster {
+	position: absolute;
+	width: 240%;
+	top: -10%;
+	left: -60%;
+}
+
+.poster .moon .moon-left {
+	position: absolute;
+	width: 103%;
+	top: 2%;
+	left: -3%;
+}
+
+.poster .moon .moon-right {
+	position: absolute;
+	width: 103%;
+	top: -2%;
+	left: -5%;
+}
+
+.poster .mountain .mountain-bk {
+	position: absolute;
+	width: 102%;
+	top: 6px;
+	left: -5.7%;
+}
+
+.poster .mountain .mountain-md {
+	position: absolute;
+	width: 102%;
+	top: 4px;
+	left: -1%;
+}
+
+.poster .mountain .mountain-fr {
+	position: absolute;
+	width: 102%;
+	top: 5px;
+	left: -0.7%;
+}
+
+.poster .mountainmen .man-left {
+	position: absolute;
+	width: 102%;
+	top: 2px;
+	left: 2%;
+}
+
+.poster .mountainmen .man-right {
+	position: absolute;
+	width: 101%;
+	top: 2px;
+	left: 0%;
+}
+
+.poster .recalllogo .logo {
+	position: absolute;
+	width: 104%;
+	top: 7px;
+	left: -3.5%;
 }
 
 /*# sourceMappingURL=main.css.map */

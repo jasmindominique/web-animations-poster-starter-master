@@ -42,19 +42,124 @@ $ratio: 11/17;
 	box-shadow: 0 20px 30px rgba(0,0,0,0.3);
 
 	// temporary background image just for help positioning during development
-	background-image: url("../img/total.jpg");
+	background-image: url("../img/space.jpg");
 	background-size: contain;
 	background-repeat: round;
 
 
 	// put all elements in the poster, like this, with % for sizing and positioning.
-	.mountain {
-		width: 8%;
-		position: absolute;
-		top: 4%;
-		left: 15%;
+	.space {
+		
 	}
 
+	.border{
+
+		.page-border{
+		    position: absolute;
+		    width: 241%;
+		    top: -.92%;
+		    left: -22%;
+		}
+	}
+
+	.background{
+
+		.bg-fullPoster{
+			position: absolute;
+		    width: 240%;
+		    top: -10%;
+		    left: -60%;
+		}
+	}
+
+	.moondial{
+
+	}
+
+	.moon{
+		
+		.moon-left{
+			position: absolute;
+		    width: 103%;
+		    top: 2%;
+		    left: -3%;
+		}
+
+		.moon-right{
+			position: absolute;
+			width: 103%;
+		    top: -2%;
+		    left: -5%;
+		}
+
+	}
+
+	.mountain{
+
+		.mountain-bk{
+		   position: absolute;
+		    width: 102%;
+		    top: 6px;
+		    left: -5.7%;		
+		}
+
+		.mountain-md{
+			position: absolute;
+		    width: 102%;
+		    top: 4px;
+		    left: -1%;
+		}
+
+		.mountain-fr{
+			position: absolute;
+		    width: 102%;
+		    top: 5px;
+		    left: -0.7%;
+		}
+
+	}
+
+	.mountainmen{
+
+		.man-left{
+			position: absolute;
+		    width: 102%;
+		    top: 2px;
+		    left: 2%;
+		}
+
+		.man-right{
+			position: absolute;
+		    width: 101%;
+		    top: 2px;
+		    left: 0%;
+		}
+
+	}
+
+	.recalllogo{
+
+		.logo{
+			position: absolute;
+		    width: 104%;
+		    top: 7px;
+		    left: -3.5%;
+		}
+
+	}
+
+	// .title{
+
+	// }
+
+	// .actorname{
+
+	// }
+
+	// .credits{
 }
+
+
+
 
 
