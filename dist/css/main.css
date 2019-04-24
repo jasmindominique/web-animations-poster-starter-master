@@ -104,6 +104,13 @@ body {
 	left: -60%;
 }
 
+.poster .moondial .moon-dial {
+	position: absolute;
+	width: 66%;
+	top: 12%;
+	left: 17%;
+}
+
 .poster .moon .moon-left {
 	position: absolute;
 	width: 103%;
