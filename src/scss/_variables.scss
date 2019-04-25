@@ -1,0 +1,18 @@
+@mixin titleoptions{
+	position: absolute;
+	font-family: 'Teko', sans-serif;
+	font-size: 3.7em;
+	color: #9B081C;
+	letter-spacing: .25em;
+	text-shadow: 2px 0px 0px #2e2a43;
+}
+
+
+@mixin headeroptions{
+	position: absolute;
+	font-family: 'Teko', sans-serif;
+	font-size: 1em;
+	color: #faf7c0;
+	letter-spacing: .35em;
+	text-shadow: 2px 0px 0px #2e2a43;
+}

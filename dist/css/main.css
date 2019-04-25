@@ -92,9 +92,9 @@ body {
 
 .poster .border .page-border {
 	position: absolute;
-	width: 241.1%;
-	top: -.97%;
-	left: -22.3%;
+	width: 103%;
+	top: 0.03%;
+	left: -1.3%;
 }
 
 .poster .background .bg-fullPoster {
@@ -109,27 +109,39 @@ body {
 	width: 66%;
 	top: 12%;
 	left: 17%;
+	-webkit-animation: animatedDial 70s linear infinite;
+	        animation: animatedDial 70s linear infinite;
 }
 
-.poster .moon .moon-left {
+.poster .moonr .moon-right {
 	position: absolute;
-	width: 103%;
-	top: 2%;
-	left: -3%;
+	width: 13%;
+	top: 12%;
+	left: 69%;
+	float: left;
+	-webkit-animation: time 20s linear infinite;
+	        animation: time 20s linear infinite;
 }
 
-.poster .moon .moon-right {
+.poster .moonl .moon-left {
 	position: absolute;
-	width: 103%;
-	top: -2%;
-	left: -5%;
+	width: 19%;
+	top: 27%;
+	left: 7%;
+	float: left;
+	-webkit-transform-origin: center;
+	        transform-origin: center;
+	-webkit-animation: time 20s linear infinite;
+	        animation: time 20s linear infinite;
 }
 
 .poster .mountain .mountain-bk {
 	position: absolute;
 	width: 102%;
-	top: 6px;
+	top: 7px;
 	left: -5.7%;
+	-webkit-animation: grow 13s ease-in-out;
+	        animation: grow 13s ease-in-out;
 }
 
 .poster .mountain .mountain-md {
@@ -144,6 +156,35 @@ body {
 	width: 102%;
 	top: 5px;
 	left: -0.7%;
+	-webkit-animation: grow 7s ease-out;
+	        animation: grow 7s ease-out;
+}
+
+.poster .building .build-one {
+	position: absolute;
+	width: 31%;
+	left: 51%;
+	top: 332px;
+	-webkit-animation: falling 6s ease-in;
+	        animation: falling 6s ease-in;
+}
+
+.poster .building .build-two {
+	position: absolute;
+	width: 23%;
+	left: 73.1%;
+	top: 269px;
+	-webkit-animation: falling 9s ease-in;
+	        animation: falling 9s ease-in;
+}
+
+.poster .building .build-three {
+	position: absolute;
+	width: 22%;
+	left: 83%;
+	top: 294px;
+	-webkit-animation: falling 12s ease-in;
+	        animation: falling 12s ease-in;
 }
 
 .poster .mountainmen .man-left {
@@ -151,6 +192,8 @@ body {
 	width: 102%;
 	top: 2px;
 	left: 2%;
+	-webkit-animation: float 10s ease-in-out infinite;
+	        animation: float 10s ease-in-out infinite;
 }
 
 .poster .mountainmen .man-right {
@@ -158,6 +201,8 @@ body {
 	width: 101%;
 	top: 2px;
 	left: 0%;
+	-webkit-animation: float 7s ease-in-out infinite;
+	        animation: float 7s ease-in-out infinite;
 }
 
 .poster .recalllogo .logo {
@@ -165,6 +210,301 @@ body {
 	width: 104%;
 	top: 7px;
 	left: -3.5%;
+}
+
+.poster .header .headingtext {
+	top: 6.3%;
+	left: 68px;
+	position: absolute;
+	font-family: 'Teko', sans-serif;
+	font-size: 1em;
+	color: #faf7c0;
+	letter-spacing: .35em;
+	text-shadow: 2px 0px 0px #2e2a43;
+	-webkit-animation: falling 13s ease-in-out;
+	        animation: falling 13s ease-in-out;
+}
+
+.poster .titleo .movietitleone {
+	top: 68.7%;
+	left: 27px;
+	-webkit-animation: letterspacing 8s  alternate ease-in-out;
+	        animation: letterspacing 8s  alternate ease-in-out;
+	position: absolute;
+	font-family: 'Teko', sans-serif;
+	font-size: 3.7em;
+	color: #9B081C;
+	letter-spacing: .25em;
+	text-shadow: 2px 0px 0px #2e2a43;
+}
+
+.poster .titleo .movietitleone:hover {
+	-webkit-animation-name: wobble;
+	        animation-name: wobble;
+	-webkit-animation-duration: 1s;
+	        animation-duration: 1s;
+	-webkit-animation-timing-function: ease-in-out;
+	        animation-timing-function: ease-in-out;
+}
+
+.poster .titlet .movietitletwo {
+	top: 75.3%;
+	left: 82px;
+	-webkit-animation: letterspacing 8s  alternate ease-in-out;
+	        animation: letterspacing 8s  alternate ease-in-out;
+	position: absolute;
+	font-family: 'Teko', sans-serif;
+	font-size: 3.7em;
+	color: #9B081C;
+	letter-spacing: .25em;
+	text-shadow: 2px 0px 0px #2e2a43;
+}
+
+.poster .titlet .movietitletwo:hover {
+	-webkit-animation-name: wobble;
+	        animation-name: wobble;
+	-webkit-animation-duration: 1s;
+	        animation-duration: 1s;
+	-webkit-animation-timing-function: ease-in-out;
+	        animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes animatedDial {
+	from {
+		-webkit-transform: rotate(-45deg);
+		        transform: rotate(-45deg);
+	}
+	to {
+		-webkit-transform: rotate(-360deg);
+		        transform: rotate(-360deg);
+	}
+}
+
+@keyframes animatedDial {
+	from {
+		-webkit-transform: rotate(-45deg);
+		        transform: rotate(-45deg);
+	}
+	to {
+		-webkit-transform: rotate(-360deg);
+		        transform: rotate(-360deg);
+	}
+}
+
+@-webkit-keyframes animatedMoons {
+	from {
+		-webkit-transform: rotate(0deg);
+		        transform: rotate(0deg);
+	}
+	to {
+		-webkit-transform: rotate(360deg);
+		        transform: rotate(360deg);
+	}
+}
+
+@keyframes animatedMoons {
+	from {
+		-webkit-transform: rotate(0deg);
+		        transform: rotate(0deg);
+	}
+	to {
+		-webkit-transform: rotate(360deg);
+		        transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes float {
+	0% {
+		-webkit-transform: translatey(0px);
+		        transform: translatey(0px);
+		opacity: 1;
+	}
+	50% {
+		-webkit-transform: translatey(-60px);
+		        transform: translatey(-60px);
+		opacity: .5;
+	}
+	100% {
+		-webkit-transform: translatey(0px);
+		        transform: translatey(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes float {
+	0% {
+		-webkit-transform: translatey(0px);
+		        transform: translatey(0px);
+		opacity: 1;
+	}
+	50% {
+		-webkit-transform: translatey(-60px);
+		        transform: translatey(-60px);
+		opacity: .5;
+	}
+	100% {
+		-webkit-transform: translatey(0px);
+		        transform: translatey(0px);
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes time {
+	to {
+		-webkit-transform: rotate(360deg);
+		        transform: rotate(360deg);
+	}
+}
+
+@keyframes time {
+	to {
+		-webkit-transform: rotate(360deg);
+		        transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes grow {
+	100% {
+		-webkit-transform: translatey(0px);
+		        transform: translatey(0px);
+	}
+	0% {
+		-webkit-transform: translatey(200px);
+		        transform: translatey(200px);
+	}
+}
+
+@keyframes grow {
+	100% {
+		-webkit-transform: translatey(0px);
+		        transform: translatey(0px);
+	}
+	0% {
+		-webkit-transform: translatey(200px);
+		        transform: translatey(200px);
+	}
+}
+
+@-webkit-keyframes letterspacing {
+	0% {
+		letter-spacing: -2em;
+		-webkit-filter: blur(0.3em);
+		        filter: blur(0.3em);
+		color: #fff;
+	}
+	50% {
+		-webkit-filter: blur(0.5em);
+		        filter: blur(0.5em);
+		color: #fff;
+	}
+	100% {
+		letter-spacing: .25em;
+		-webkit-filter: blur(0rem);
+		        filter: blur(0rem);
+	}
+}
+
+@keyframes letterspacing {
+	0% {
+		letter-spacing: -2em;
+		-webkit-filter: blur(0.3em);
+		        filter: blur(0.3em);
+		color: #fff;
+	}
+	50% {
+		-webkit-filter: blur(0.5em);
+		        filter: blur(0.5em);
+		color: #fff;
+	}
+	100% {
+		letter-spacing: .25em;
+		-webkit-filter: blur(0rem);
+		        filter: blur(0rem);
+	}
+}
+
+@-webkit-keyframes wobble {
+	10% {
+		-webkit-transform: translateX(8px);
+		        transform: translateX(8px);
+	}
+	20% {
+		-webkit-transform: translateX(-6px);
+		        transform: translateX(-6px);
+	}
+	40% {
+		-webkit-transform: translateX(4px);
+		        transform: translateX(4px);
+	}
+	60% {
+		-webkit-transform: translateX(-2px);
+		        transform: translateX(-2px);
+	}
+	80% {
+		-webkit-transform: translateX(1px);
+		        transform: translateX(1px);
+	}
+	100% {
+		-webkit-transform: translateX(0);
+		        transform: translateX(0);
+	}
+}
+
+@keyframes wobble {
+	10% {
+		-webkit-transform: translateX(8px);
+		        transform: translateX(8px);
+	}
+	20% {
+		-webkit-transform: translateX(-6px);
+		        transform: translateX(-6px);
+	}
+	40% {
+		-webkit-transform: translateX(4px);
+		        transform: translateX(4px);
+	}
+	60% {
+		-webkit-transform: translateX(-2px);
+		        transform: translateX(-2px);
+	}
+	80% {
+		-webkit-transform: translateX(1px);
+		        transform: translateX(1px);
+	}
+	100% {
+		-webkit-transform: translateX(0);
+		        transform: translateX(0);
+	}
+}
+
+@-webkit-keyframes falling {
+	0% {
+		-webkit-transform: translatey(-100px);
+		        transform: translatey(-100px);
+		opacity: 0;
+	}
+	50% {
+		opacity: .3;
+	}
+	100% {
+		-webkit-transform: translatey(0px);
+		        transform: translatey(0px);
+	}
+}
+
+@keyframes falling {
+	0% {
+		-webkit-transform: translatey(-100px);
+		        transform: translatey(-100px);
+		opacity: 0;
+	}
+	50% {
+		opacity: .3;
+	}
+	100% {
+		-webkit-transform: translatey(0px);
+		        transform: translatey(0px);
+	}
 }
 
 /*# sourceMappingURL=main.css.map */

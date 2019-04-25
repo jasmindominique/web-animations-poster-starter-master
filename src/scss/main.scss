@@ -13,7 +13,7 @@ TABLE OF CONTENTS:
 */
 
 @import 'reset';
-
+@import "_variables"; //why did this not allow me to use '' ??
 
 /* 1. Main Layout ================================= */
 
@@ -56,9 +56,9 @@ $ratio: 11/17;
 
 		.page-border{
 		    position: absolute;
-		    width: 241.1%;
-		    top: -.97%;
-		    left: -22.3%;
+	       width: 103%;
+		    top: 0.03%;
+		    left: -1.3%;
 		}
 	}
 
@@ -79,25 +79,37 @@ $ratio: 11/17;
 		    width: 66%;
 		    top: 12%;
 		    left: 17%;
+    		animation: animatedDial 70s linear infinite;
 		}
 	}
 
-	.moon{
-		
-		.moon-left{
-			position: absolute;
-		    width: 103%;
-		    top: 2%;
-		    left: -3%;
-		}
+	.moonr{
 
 		.moon-right{
 			position: absolute;
-			width: 103%;
-		    top: -2%;
-		    left: -5%;
+			width: 13%;
+		    top: 12%;
+		    left: 69%;
+		    float: left;
+    		animation: time 20s linear infinite;
 		}
+	}
 
+	.moonl{
+		// animation: time 20s linear infinite;
+
+		.moon-left{
+			position: absolute;
+		    width: 19%;
+		    top: 27%;
+		    left: 7%;
+		    float: left;
+		    transform-origin: center;
+	        // transform: translate(100px, 21px) rotate(0deg);
+		    // position: relative;
+			animation: time 20s linear infinite;
+
+		}
 	}
 
 	.mountain{
@@ -105,8 +117,10 @@ $ratio: 11/17;
 		.mountain-bk{
 		   position: absolute;
 		    width: 102%;
-		    top: 6px;
-		    left: -5.7%;		
+		    top: 7px;
+		    left: -5.7%;
+		    animation: grow 13s ease-in-out ;
+
 		}
 
 		.mountain-md{
@@ -121,8 +135,39 @@ $ratio: 11/17;
 		    width: 102%;
 		    top: 5px;
 		    left: -0.7%;
+		    animation: grow 7s ease-out ;
 		}
 
+	}
+
+	.building{
+
+		.build-one{
+			position:absolute;
+			width: 31%;
+			left: 51%;
+			top: 332px;
+		    animation: falling 6s ease-in ;
+
+		}
+
+		.build-two{
+			position: absolute;
+			width: 23%;
+		    left: 73.1%;
+		    top: 269px;
+		    animation: falling 9s ease-in ;
+
+		}
+
+		.build-three{
+			position:absolute;
+			width: 22%;
+			left: 83%;
+			top: 294px;
+		    animation: falling 12s ease-in;
+
+		}
 	}
 
 	.mountainmen{
@@ -132,6 +177,7 @@ $ratio: 11/17;
 		    width: 102%;
 		    top: 2px;
 		    left: 2%;
+		    animation: float 10s ease-in-out infinite;
 		}
 
 		.man-right{
@@ -139,6 +185,9 @@ $ratio: 11/17;
 		    width: 101%;
 		    top: 2px;
 		    left: 0%;
+		    animation: float 7s ease-in-out infinite;
+
+
 		}
 
 	}
@@ -154,18 +203,146 @@ $ratio: 11/17;
 
 	}
 
-	// .title{
+	.header{
 
-	// }
+		.headingtext{
+				top: 6.3%;
+				left: 68px;
+				@include headeroptions;
+			    animation: falling 13s ease-in-out ;
 
-	// .actorname{
+		}
+	}
 
-	// }
+	.titleo{
+			.movietitleone{
+				top: 68.7%;
+				left: 27px;
+				animation: letterspacing 8s  alternate ease-in-out;
+				@include titleoptions;
+			}
 
-	// .credits{
+			.movietitleone:hover{
+				animation-name: wobble;
+				animation-duration: 1s;
+				animation-timing-function: ease-in-out;
+			}
+		}
+
+	.titlet{
+		.movietitletwo{
+				top: 75.3%;
+				left: 82px;
+				animation: letterspacing 8s  alternate ease-in-out;
+				@include titleoptions;
+
+			}
+
+			.movietitletwo:hover{
+				animation-name: wobble;
+				animation-duration: 1s;
+				animation-timing-function: ease-in-out;
+			}
+		}
+
+	
+
 }
 
+// Keyframe Animations
 
+		@keyframes animatedDial {
+		from { transform: rotate(-45deg); } //negative deg = counterclockwise
+		to { transform: rotate(-360deg); }
+	}
 
+	@keyframes animatedMoons {
+		from { transform: rotate(0deg); }
+		to { transform: rotate(360deg); } //positive deg = clockwise
+	}
 
+	@keyframes float {
+		0% {
+			transform: translatey(0px);
+			opacity: 1;
+		}
+		50% {
+			transform: translatey(-60px);
+			opacity: .5;
+		}
+		100% {
+			transform: translatey(0px);
+			opacity: 1;
+		}
+	}
+
+	@keyframes time {
+	  to {
+	    transform: rotate(360deg);
+	  }
+	}
+
+	@keyframes grow {
+		100% {
+			transform: translatey(0px);
+		}
+		
+		0% {
+			transform: translatey(200px);
+		}
+	}
+
+	@keyframes letterspacing {
+	    0% {
+	        letter-spacing: -2em;
+	        filter: blur(.3em);
+	        color:#fff;
+	    }
+
+	    50% {
+	        filter: blur(.5em);
+	        color: #fff;
+	    }
+
+	    100% {
+	        letter-spacing: .25em;
+	        filter: blur(0rem);
+	    }
+	}
+
+		@keyframes wobble{
+	  10% {
+		transform: translateX(8px);
+	  }
+	  20% {
+	    transform: translateX(-6px);
+	  }
+	  40% {
+	    transform: translateX(4px);
+	  }
+	  60% {
+	    transform: translateX(-2px);
+	  }
+	  80% {
+	    transform: translateX(1px);
+	  }
+	  100% {
+	    transform: translateX(0);
+	  }
+	}
+
+	@keyframes falling {
+		0% {
+			transform: translatey(-100px);
+			opacity: 0;
+		}
+
+		50%{
+			opacity: .3;
+		}
+		
+		100% {
+			transform: translatey(0px);
+		}
+	}
 
