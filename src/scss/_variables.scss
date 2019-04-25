@@ -1,7 +1,8 @@
 @mixin titleoptions{
 	position: absolute;
 	font-family: 'Teko', sans-serif;
-	font-size: 3.7em;
+	font-size: 8vh;
+	// font-size: 3.7em;
 	color: #9B081C;
 	letter-spacing: .25em;
 	text-shadow: 2px 0px 0px #2e2a43;
@@ -11,8 +12,32 @@
 @mixin headeroptions{
 	position: absolute;
 	font-family: 'Teko', sans-serif;
-	font-size: 1em;
+	font-size: 2vh;
 	color: #faf7c0;
 	letter-spacing: .35em;
 	text-shadow: 2px 0px 0px #2e2a43;
+}
+
+$tablet: 640px;
+$desktop-small: 960px;
+$desktop-large: 1280px;
+
+
+
+@mixin bp-tablet{
+	@media screen and(min-width: $desktop-small){
+		@content;
+	}
+}
+
+@mixin bp-desktop-small{
+	@media screen and(min-width: $desktop-small){
+		@content;
+	}
+}
+
+@mixin bp-desktop-large{
+	@media screen and(min-width: $desktop-small){
+		@content;
+	}
 }

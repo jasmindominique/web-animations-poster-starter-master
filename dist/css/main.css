@@ -113,22 +113,20 @@ body {
 	        animation: animatedDial 70s linear infinite;
 }
 
-.poster .moonr .moon-right {
+.poster .moondial .moonr .moon-right {
 	position: absolute;
 	width: 13%;
-	top: 12%;
-	left: 69%;
-	float: left;
+	top: 27%;
+	left: 7%;
 	-webkit-animation: time 20s linear infinite;
 	        animation: time 20s linear infinite;
 }
 
-.poster .moonl .moon-left {
+.poster .moondial .moonl .moon-left {
 	position: absolute;
 	width: 19%;
 	top: 27%;
 	left: 7%;
-	float: left;
 	-webkit-transform-origin: center;
 	        transform-origin: center;
 	-webkit-animation: time 20s linear infinite;
@@ -192,8 +190,6 @@ body {
 	width: 102%;
 	top: 2px;
 	left: 2%;
-	-webkit-animation: float 10s ease-in-out infinite;
-	        animation: float 10s ease-in-out infinite;
 }
 
 .poster .mountainmen .man-right {
@@ -201,8 +197,6 @@ body {
 	width: 101%;
 	top: 2px;
 	left: 0%;
-	-webkit-animation: float 7s ease-in-out infinite;
-	        animation: float 7s ease-in-out infinite;
 }
 
 .poster .recalllogo .logo {
@@ -217,7 +211,7 @@ body {
 	left: 68px;
 	position: absolute;
 	font-family: 'Teko', sans-serif;
-	font-size: 1em;
+	font-size: 2vh;
 	color: #faf7c0;
 	letter-spacing: .35em;
 	text-shadow: 2px 0px 0px #2e2a43;
@@ -232,7 +226,7 @@ body {
 	        animation: letterspacing 8s  alternate ease-in-out;
 	position: absolute;
 	font-family: 'Teko', sans-serif;
-	font-size: 3.7em;
+	font-size: 8vh;
 	color: #9B081C;
 	letter-spacing: .25em;
 	text-shadow: 2px 0px 0px #2e2a43;
@@ -254,7 +248,7 @@ body {
 	        animation: letterspacing 8s  alternate ease-in-out;
 	position: absolute;
 	font-family: 'Teko', sans-serif;
-	font-size: 3.7em;
+	font-size: 8vh;
 	color: #9B081C;
 	letter-spacing: .25em;
 	text-shadow: 2px 0px 0px #2e2a43;

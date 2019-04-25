@@ -48,9 +48,6 @@ $ratio: 11/17;
 
 
 	// put all elements in the poster, like this, with % for sizing and positioning.
-	.space {
-		
-	}
 
 	.border{
 
@@ -81,16 +78,14 @@ $ratio: 11/17;
 		    left: 17%;
     		animation: animatedDial 70s linear infinite;
 		}
-	}
 
-	.moonr{
+		.moonr{
 
 		.moon-right{
 			position: absolute;
 			width: 13%;
-		    top: 12%;
-		    left: 69%;
-		    float: left;
+		    top: 27%;
+		    left: 7%;
     		animation: time 20s linear infinite;
 		}
 	}
@@ -98,19 +93,18 @@ $ratio: 11/17;
 	.moonl{
 		// animation: time 20s linear infinite;
 
-		.moon-left{
-			position: absolute;
-		    width: 19%;
-		    top: 27%;
-		    left: 7%;
-		    float: left;
-		    transform-origin: center;
-	        // transform: translate(100px, 21px) rotate(0deg);
-		    // position: relative;
-			animation: time 20s linear infinite;
+			.moon-left{
+				position: absolute;
+			    width: 19%;
+			    top: 27%;
+			    left: 7%;
+			    transform-origin: center;
+				animation: time 20s linear infinite;
 
+			}
 		}
 	}
+
 
 	.mountain{
 
@@ -177,7 +171,7 @@ $ratio: 11/17;
 		    width: 102%;
 		    top: 2px;
 		    left: 2%;
-		    animation: float 10s ease-in-out infinite;
+		    // animation: float 10s ease-in-out infinite;
 		}
 
 		.man-right{
@@ -185,9 +179,7 @@ $ratio: 11/17;
 		    width: 101%;
 		    top: 2px;
 		    left: 0%;
-		    animation: float 7s ease-in-out infinite;
-
-
+		    // animation: float 7s ease-in-out infinite;
 		}
 
 	}
