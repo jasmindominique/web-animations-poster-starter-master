@@ -25,6 +25,15 @@ body {
 	background: #eee;
 }
 
+.wrapper{
+
+	background-image: url("../img/space3.gif");
+    height: 100vh;
+    padding:0;
+    margin:0;
+
+}
+
 // calculate the ratio of your poster and put it here
 $ratio: 11/17;
 
@@ -76,7 +85,7 @@ $ratio: 11/17;
 		    width: 66%;
 		    top: 12%;
 		    left: 17%;
-    		animation: animatedDial 70s linear infinite;
+    		animation: animatedDial 80s linear infinite;
 		}
 
 		.moonr{
@@ -84,8 +93,8 @@ $ratio: 11/17;
 		.moon-right{
 			position: absolute;
 			width: 13%;
-		    top: 27%;
-		    left: 7%;
+		    top: 14%;
+		    left: 72%;
     		animation: time 20s linear infinite;
 		}
 	}
@@ -98,8 +107,8 @@ $ratio: 11/17;
 			    width: 19%;
 			    top: 27%;
 			    left: 7%;
-			    transform-origin: center;
-				animation: time 20s linear infinite;
+			    z-index: 1;
+				animation: time 30s linear infinite;
 
 			}
 		}
@@ -113,7 +122,18 @@ $ratio: 11/17;
 		    width: 102%;
 		    top: 7px;
 		    left: -5.7%;
-		    animation: grow 13s ease-in-out ;
+		    opacity: 0;
+		    transform: translateY(400px);
+		    z-index: 0;
+		    // animation: grow 13s ease-in-out ;
+		    // transform-origin: botton;
+		    // transform: translateY(100);
+
+		    .mountain-bk:hover{
+				animation-name: wobble;
+				animation-duration: 1s;
+				animation-timing-function: ease-in-out;
+			}
 
 		}
 
@@ -129,7 +149,8 @@ $ratio: 11/17;
 		    width: 102%;
 		    top: 5px;
 		    left: -0.7%;
-		    animation: grow 7s ease-out ;
+		    // animation: grow 7s ease-out ;
+		    transform: translateY(300px);
 		}
 
 	}
@@ -137,31 +158,36 @@ $ratio: 11/17;
 	.building{
 
 		.build-one{
-			position:absolute;
+			position:absolute;    
 			width: 31%;
-			left: 51%;
-			top: 332px;
-		    animation: falling 6s ease-in ;
+		    left: 60%;
+		    top: 345px;
+		    opacity: 0;
+			// transform-origin: top; 
+		    // animation: falling 6s ease-in ;
 
 		}
 
 		.build-two{
 			position: absolute;
-			width: 23%;
-		    left: 73.1%;
-		    top: 269px;
-		    animation: falling 9s ease-in ;
+			width: 20%;
+		    left: 82%;
+		    top: 309px;
+		    opacity: 0;
+			// transform: translateX(150px);
+		    // animation: falling 9s ease-in ;
 
 		}
 
-		.build-three{
-			position:absolute;
-			width: 22%;
-			left: 83%;
-			top: 294px;
-		    animation: falling 12s ease-in;
+		// .build-three{
+		// 	position:absolute;
+		// 	width: 22%;
+		// 	left: 83%;
+		// 	top: 294px;
+		// 	transform: translateX(50px);
+		//     // animation: falling 12s ease-in;
 
-		}
+		// }
 	}
 
 	.mountainmen{
@@ -171,7 +197,7 @@ $ratio: 11/17;
 		    width: 102%;
 		    top: 2px;
 		    left: 2%;
-		    // animation: float 10s ease-in-out infinite;
+		    animation: float 9s ease-in-out infinite;
 		}
 
 		.man-right{
@@ -179,7 +205,7 @@ $ratio: 11/17;
 		    width: 101%;
 		    top: 2px;
 		    left: 0%;
-		    // animation: float 7s ease-in-out infinite;
+		    animation: float 9s ease-in-out infinite;
 		}
 
 	}
@@ -191,6 +217,8 @@ $ratio: 11/17;
 		    width: 104%;
 		    top: 7px;
 		    left: -3.5%;
+			transform: translateX(-300px);
+			opacity: 0;
 		}
 
 	}
@@ -201,7 +229,7 @@ $ratio: 11/17;
 				top: 6.3%;
 				left: 68px;
 				@include headeroptions;
-			    animation: falling 13s ease-in-out ;
+			    // animation: falling 13s ease-in-out ;
 
 		}
 	}
@@ -210,13 +238,15 @@ $ratio: 11/17;
 			.movietitleone{
 				top: 68.7%;
 				left: 27px;
-				animation: letterspacing 8s  alternate ease-in-out;
+				// transform: translateX(-200px);
+				opacity: 0;
+				animation: letterspacing 3s  alternate ease-in-out;
 				@include titleoptions;
 			}
 
 			.movietitleone:hover{
 				animation-name: wobble;
-				animation-duration: 1s;
+				animation-duration: .4s;
 				animation-timing-function: ease-in-out;
 			}
 		}
@@ -225,14 +255,16 @@ $ratio: 11/17;
 		.movietitletwo{
 				top: 75.3%;
 				left: 82px;
-				animation: letterspacing 8s  alternate ease-in-out;
+				opacity: 0;
+				// transform: translateX(-300px);
+				animation: letterspacing 3s  alternate ease-in-out;
 				@include titleoptions;
 
 			}
 
 			.movietitletwo:hover{
 				animation-name: wobble;
-				animation-duration: 1s;
+				animation-duration: .4s;
 				animation-timing-function: ease-in-out;
 			}
 		}
@@ -259,7 +291,7 @@ $ratio: 11/17;
 			opacity: 1;
 		}
 		50% {
-			transform: translatey(-60px);
+			transform: translatey(-30px);
 			opacity: .5;
 		}
 		100% {

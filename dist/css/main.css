@@ -74,6 +74,13 @@ body {
 	background: #eee;
 }
 
+.wrapper {
+	background-image: url("../img/space3.gif");
+	height: 100vh;
+	padding: 0;
+	margin: 0;
+}
+
 .poster {
 	position: absolute;
 	height: 90vh;
@@ -109,15 +116,15 @@ body {
 	width: 66%;
 	top: 12%;
 	left: 17%;
-	-webkit-animation: animatedDial 70s linear infinite;
-	        animation: animatedDial 70s linear infinite;
+	-webkit-animation: animatedDial 80s linear infinite;
+	        animation: animatedDial 80s linear infinite;
 }
 
 .poster .moondial .moonr .moon-right {
 	position: absolute;
 	width: 13%;
-	top: 27%;
-	left: 7%;
+	top: 14%;
+	left: 72%;
 	-webkit-animation: time 20s linear infinite;
 	        animation: time 20s linear infinite;
 }
@@ -127,10 +134,9 @@ body {
 	width: 19%;
 	top: 27%;
 	left: 7%;
-	-webkit-transform-origin: center;
-	        transform-origin: center;
-	-webkit-animation: time 20s linear infinite;
-	        animation: time 20s linear infinite;
+	z-index: 1;
+	-webkit-animation: time 30s linear infinite;
+	        animation: time 30s linear infinite;
 }
 
 .poster .mountain .mountain-bk {
@@ -138,8 +144,19 @@ body {
 	width: 102%;
 	top: 7px;
 	left: -5.7%;
-	-webkit-animation: grow 13s ease-in-out;
-	        animation: grow 13s ease-in-out;
+	opacity: 0;
+	-webkit-transform: translateY(400px);
+	        transform: translateY(400px);
+	z-index: 0;
+}
+
+.poster .mountain .mountain-bk .mountain-bk:hover {
+	-webkit-animation-name: wobble;
+	        animation-name: wobble;
+	-webkit-animation-duration: 1s;
+	        animation-duration: 1s;
+	-webkit-animation-timing-function: ease-in-out;
+	        animation-timing-function: ease-in-out;
 }
 
 .poster .mountain .mountain-md {
@@ -154,35 +171,24 @@ body {
 	width: 102%;
 	top: 5px;
 	left: -0.7%;
-	-webkit-animation: grow 7s ease-out;
-	        animation: grow 7s ease-out;
+	-webkit-transform: translateY(300px);
+	        transform: translateY(300px);
 }
 
 .poster .building .build-one {
 	position: absolute;
 	width: 31%;
-	left: 51%;
-	top: 332px;
-	-webkit-animation: falling 6s ease-in;
-	        animation: falling 6s ease-in;
+	left: 60%;
+	top: 345px;
+	opacity: 0;
 }
 
 .poster .building .build-two {
 	position: absolute;
-	width: 23%;
-	left: 73.1%;
-	top: 269px;
-	-webkit-animation: falling 9s ease-in;
-	        animation: falling 9s ease-in;
-}
-
-.poster .building .build-three {
-	position: absolute;
-	width: 22%;
-	left: 83%;
-	top: 294px;
-	-webkit-animation: falling 12s ease-in;
-	        animation: falling 12s ease-in;
+	width: 20%;
+	left: 82%;
+	top: 309px;
+	opacity: 0;
 }
 
 .poster .mountainmen .man-left {
@@ -190,6 +196,8 @@ body {
 	width: 102%;
 	top: 2px;
 	left: 2%;
+	-webkit-animation: float 9s ease-in-out infinite;
+	        animation: float 9s ease-in-out infinite;
 }
 
 .poster .mountainmen .man-right {
@@ -197,6 +205,8 @@ body {
 	width: 101%;
 	top: 2px;
 	left: 0%;
+	-webkit-animation: float 9s ease-in-out infinite;
+	        animation: float 9s ease-in-out infinite;
 }
 
 .poster .recalllogo .logo {
@@ -204,6 +214,9 @@ body {
 	width: 104%;
 	top: 7px;
 	left: -3.5%;
+	-webkit-transform: translateX(-300px);
+	        transform: translateX(-300px);
+	opacity: 0;
 }
 
 .poster .header .headingtext {
@@ -215,15 +228,14 @@ body {
 	color: #faf7c0;
 	letter-spacing: .35em;
 	text-shadow: 2px 0px 0px #2e2a43;
-	-webkit-animation: falling 13s ease-in-out;
-	        animation: falling 13s ease-in-out;
 }
 
 .poster .titleo .movietitleone {
 	top: 68.7%;
 	left: 27px;
-	-webkit-animation: letterspacing 8s  alternate ease-in-out;
-	        animation: letterspacing 8s  alternate ease-in-out;
+	opacity: 0;
+	-webkit-animation: letterspacing 3s  alternate ease-in-out;
+	        animation: letterspacing 3s  alternate ease-in-out;
 	position: absolute;
 	font-family: 'Teko', sans-serif;
 	font-size: 8vh;
@@ -235,8 +247,8 @@ body {
 .poster .titleo .movietitleone:hover {
 	-webkit-animation-name: wobble;
 	        animation-name: wobble;
-	-webkit-animation-duration: 1s;
-	        animation-duration: 1s;
+	-webkit-animation-duration: .4s;
+	        animation-duration: .4s;
 	-webkit-animation-timing-function: ease-in-out;
 	        animation-timing-function: ease-in-out;
 }
@@ -244,8 +256,9 @@ body {
 .poster .titlet .movietitletwo {
 	top: 75.3%;
 	left: 82px;
-	-webkit-animation: letterspacing 8s  alternate ease-in-out;
-	        animation: letterspacing 8s  alternate ease-in-out;
+	opacity: 0;
+	-webkit-animation: letterspacing 3s  alternate ease-in-out;
+	        animation: letterspacing 3s  alternate ease-in-out;
 	position: absolute;
 	font-family: 'Teko', sans-serif;
 	font-size: 8vh;
@@ -257,8 +270,8 @@ body {
 .poster .titlet .movietitletwo:hover {
 	-webkit-animation-name: wobble;
 	        animation-name: wobble;
-	-webkit-animation-duration: 1s;
-	        animation-duration: 1s;
+	-webkit-animation-duration: .4s;
+	        animation-duration: .4s;
 	-webkit-animation-timing-function: ease-in-out;
 	        animation-timing-function: ease-in-out;
 }
@@ -314,8 +327,8 @@ body {
 		opacity: 1;
 	}
 	50% {
-		-webkit-transform: translatey(-60px);
-		        transform: translatey(-60px);
+		-webkit-transform: translatey(-30px);
+		        transform: translatey(-30px);
 		opacity: .5;
 	}
 	100% {
@@ -332,8 +345,8 @@ body {
 		opacity: 1;
 	}
 	50% {
-		-webkit-transform: translatey(-60px);
-		        transform: translatey(-60px);
+		-webkit-transform: translatey(-30px);
+		        transform: translatey(-30px);
 		opacity: .5;
 	}
 	100% {
